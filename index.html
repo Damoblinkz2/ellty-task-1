@@ -1,0 +1,287 @@
+<!-- HTML document declaration and head section -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Character encoding and viewport settings -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Page title -->
+    <title>Document</title>
+    <!-- jQuery library for JavaScript functionality -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- CSS styles for the page layout and elements -->
+    <style>
+      /* Import Google Fonts for typography */
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      /* Global reset for padding, margin, box-sizing, and font */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Manrope", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+
+      /* Main container styling: centers content vertically and horizontally */
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        /* Inner div with background color and padding */
+        .div {
+          background-color: rgb(228, 222, 222);
+          padding: 20px;
+
+          /* Unordered list styling: removes default list style */
+          ul {
+            list-style: none;
+
+            /* List item styling: white background, fixed dimensions, margins, padding, overflow hidden, smooth height transition */
+            li {
+              background-color: #ffffff;
+              height: 42px;
+              width: 370px;
+              margin: 10px 0;
+              padding: 0 15px 8px 22px;
+              overflow: hidden;
+              transition: height 0.3s ease;
+
+              /* Header container for "All pages" with flex layout */
+              .li-container {
+                display: flex;
+                padding: 8px 0 8px;
+                justify-content: space-between;
+                align-items: center;
+                height: 42px;
+              }
+
+              /* Individual page divs with flex layout */
+              .li-div {
+                display: flex;
+                height: 42px;
+                justify-content: space-between;
+              }
+
+              /* Button styling: yellow background, full width, hover effect */
+              button {
+                height: 40px;
+                width: 100%;
+                background: #ffce22;
+                border: none;
+                color: #ffffff;
+                font-weight: bold;
+                border-radius: 4px;
+              }
+              button:hover {
+                background: #ffd84d;
+              }
+
+              /* Span container for checkboxes: centers the input */
+              span {
+                height: 35px;
+                width: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                /* Checkbox input styling: size, color, border radius */
+                input {
+                  height: 23px;
+                  width: 23px;
+                  color: #ffffff;
+                  border-radius: 6px;
+                }
+
+                /* Checked checkbox styling: blue accent color */
+                input[type="checkbox"]:checked {
+                  accent-color: rgba(26, 26, 185, 0.872);
+                }
+              }
+            }
+
+            /* Open li styling: expanded height, border radius, shadow */
+            .li.open {
+              height: 326px;
+              align-items: start;
+              border-radius: 6px;
+              box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            }
+          }
+        }
+      }
+
+      /* Horizontal rule styling: margin */
+      hr {
+        margin: 10px 0;
+      }
+
+      /* Paragraph class for "All pages": allows flex-grow */
+      .paragraph {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <!-- Body content: main container with list of items -->
+  <body>
+    <!-- Main container div: centers the content -->
+    <div class="container">
+      <!-- Inner div: holds the list with background and padding -->
+      <div class="div">
+        <!-- Unordered list: contains multiple list items -->
+        <ul>
+          <!-- First list item: collapsible section for pages -->
+          <li class="li">
+            <!-- Header container: "All pages" text and checkbox -->
+            <div class="li-container">
+              <p class="paragraph">All pages</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <!-- Horizontal separator -->
+            <hr />
+            <!-- Individual page options: each with text and checkbox -->
+            <div class="li-div">
+              <p>pages 1</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <div class="li-div">
+              <p>pages 2</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <div class="li-div">
+              <p>pages 3</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <div class="li-div">
+              <p>pages 4</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <!-- Horizontal separator -->
+            <hr />
+            <!-- Done button -->
+            <button>Done</button>
+          </li>
+          <!-- Second list item: similar structure -->
+          <li class="li">
+            <div class="li-container">
+              <p class="paragraph">All pages</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <hr />
+            <div class="li-div">
+              <p>pages 1</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <div class="li-div">
+              <p>pages 2</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <div class="li-div">
+              <p>pages 3</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <div class="li-div">
+              <p>pages 4</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <hr />
+            <button>Done</button>
+          </li>
+          <!-- Third list item: similar structure -->
+          <li class="li">
+            <div class="li-container">
+              <p class="paragraph">All pages</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <hr />
+            <div class="li-div">
+              <p>pages 1</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <div class="li-div">
+              <p>pages 2</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <div class="li-div">
+              <p>pages 3</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <div class="li-div">
+              <p>pages 4</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <hr />
+            <button>Done</button>
+          </li>
+          <!-- Fourth list item: similar structure -->
+          <li class="li">
+            <div class="li-container">
+              <p class="paragraph">All pages</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <hr />
+            <div class="li-div">
+              <p>pages 1</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <div class="li-div">
+              <p>pages 2</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <div class="li-div">
+              <p>pages 3</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <div class="li-div">
+              <p>pages 4</p>
+              <span><input type="checkbox" /></span>
+            </div>
+            <hr />
+            <button>Done</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      // Variable to track if any li is open
+      let liOpen = false;
+
+      // Event listener for clicking on the "All pages" paragraph to expand/collapse the li
+      $(".paragraph").on("click", function () {
+        if (liOpen) {
+          // Close all open li elements
+          $(".li").removeClass("open");
+          liOpen = false;
+          return;
+        }
+        // Toggle the open class on the clicked li
+        $(this).closest(".li").toggleClass("open");
+        liOpen = true;
+      });
+
+      // Event listener for checkbox changes
+      $('input[type="checkbox"]').change(function (e) {
+        e.stopPropagation(); // Prevent event bubbling to avoid triggering expand/collapse
+        if ($(this).closest(".li-container").length > 0) {
+          // This is the "All pages" checkbox
+          var isChecked = $(this).is(":checked");
+          // Set the checked state of all individual page checkboxes in the same li
+          $(this)
+            .closest(".li")
+            .find('.li-div input[type="checkbox"]')
+            .prop("checked", isChecked);
+        }
+      });
+    </script>
+  </body>
+</html>
+<!--  -->
